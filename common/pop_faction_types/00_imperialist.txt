@@ -21,8 +21,10 @@ imperialist = {
 	}
 
 	is_potential = {
-		NOT = { has_ethic = ethic_gestalt_consciousness }
-		NOT = { has_country_flag = suppress_vanilla_factions }
+		NOR = {
+			has_ethic = ethic_gestalt_consciousness
+			has_country_flag = suppress_vanilla_factions
+		}
 		NOT = { has_modifier = banned_militarist }																  
 	}
 	
@@ -46,10 +48,7 @@ imperialist = {
 					  
 
 		NOT = { has_trait = trait_nerve_stapled }
-		OR = {
-			has_ethic = ethic_militarist
-			has_ethic = ethic_fanatic_militarist
-		}
+		is_militarist = yes
 	}
 	
 	attraction = {
@@ -722,8 +721,10 @@ imperialist = {
 				exists = owner
 				parameter:empire = { 
 					has_modifier = suppressed_militarist 
-					not = { has_ethic = ethic_militarist }
-					not = { has_ethic = ethic_fanatic_militarist }
+					NOR = {
+						has_ethic = ethic_militarist
+						has_ethic = ethic_fanatic_militarist
+					}
 				}
 				not = { has_modifier = banned_faction }
 			}

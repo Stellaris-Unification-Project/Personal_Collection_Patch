@@ -17,10 +17,10 @@ socialists = {
 		}
 	}
 	is_potential = {
-		NOT = {
+		NOR = {
 			has_authority = auth_hive_mind
+			has_modifier = banned_socialism
 		}
-		NOT = { has_modifier = banned_socialism }
 	}
 	parameters = {
 		empire = {
@@ -594,8 +594,10 @@ socialists = {
 				exists = owner
 				parameter:empire = { 
 					has_modifier = suppressed_socialism
-					not = { has_ethic = ethic_socialism }
-					not = { has_ethic = ethic_fanatic_socialism }
+					NOR = {
+						has_ethic = ethic_socialism
+						has_ethic = ethic_fanatic_socialism
+					}
 				}
 				not = { has_modifier = banned_faction }
 			}

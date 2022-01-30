@@ -20,8 +20,10 @@ prosperity = {
 	}
 	
 	is_potential = {
-		NOT = { has_ethic = ethic_gestalt_consciousness }
-		NOT = { has_country_flag = suppress_vanilla_factions }
+		NOR = {
+			has_ethic = ethic_gestalt_consciousness
+			has_country_flag = suppress_vanilla_factions
+		}
 		NOT = { has_modifier = banned_pacifist }
 	}
 	
@@ -73,11 +75,7 @@ prosperity = {
 		
 		modifier = {
 			factor = 1.5
-			
-			OR = {
-				has_ethic = ethic_pacifist
-				has_ethic = ethic_fanatic_pacifist
-			}
+			is_pacifist = yes
 		}
 		
 		# Should really check for citizenship instead
@@ -552,8 +550,10 @@ prosperity = {
 				exists = owner
 				parameter:empire = { 
 					has_modifier = suppressed_pacifist
-					not = { has_ethic = ethic_pacifist }
-					not = { has_ethic = ethic_fanatic_pacifist}
+					NOR = {
+						has_ethic = ethic_pacifist
+						has_ethic = ethic_fanatic_pacifist
+					}
 				}
 				not = { has_modifier = banned_faction }
 			}

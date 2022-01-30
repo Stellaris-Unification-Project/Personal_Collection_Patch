@@ -21,8 +21,10 @@ totalitarian = {
 	}
 
 	is_potential = {
-		NOT = { has_ethic = ethic_gestalt_consciousness }
-		NOT = { has_country_flag = suppress_vanilla_factions }
+		NOR = {
+			has_ethic = ethic_gestalt_consciousness
+			has_country_flag = suppress_vanilla_factions
+		}
 		NOT = { has_modifier = banned_authoritarian }
 	}
 	
@@ -41,10 +43,7 @@ totalitarian = {
 		is_being_purged = no
 		has_culture_shock = no
 		NOT = { has_trait = trait_nerve_stapled }
-		OR = {
-			has_ethic = ethic_authoritarian
-			has_ethic = ethic_fanatic_authoritarian
-		}
+		is_authoritarian = yes
 	}
 	
 	attraction = {
@@ -124,7 +123,7 @@ totalitarian = {
 		potential = {
 			exists = owner
 			owner = { 
-				NOT = { is_democracy = yes }
+				is_democracy = no
 			}
 		}
 
@@ -154,7 +153,7 @@ totalitarian = {
 
 		trigger = {
 			owner = {
-				NOT = { is_democracy = yes }
+				is_democracy = no
 			}
 		}
 	}
@@ -484,8 +483,10 @@ totalitarian = {
 				exists = owner
 				parameter:empire = { 
 					has_modifier = suppressed_authoritarian
-					not = { has_ethic = ethic_authoritarian }
-					not = { has_ethic = ethic_fanatic_authoritarian }
+					NOR = {
+						has_ethic = ethic_authoritarian
+						has_ethic = ethic_fanatic_authoritarian
+					}
 				}
 				not = { has_modifier = banned_faction }
 			}

@@ -34,7 +34,7 @@ event = {# Create Bank Country
 			}
 			last_created_country = { save_global_event_target_as = bank_country randomize_flag_symbol = "corporate" }
 			every_country = { establish_communications = event_target:bank_country }
-			every_country = { limit = { is_ai = no } country_event = { id = GalaxyBankEvents.1 } }
+			every_playable_country = { limit = { is_ai = no } country_event = { id = GalaxyBankEvents.1 } }
 		}
 	}
 }
@@ -82,7 +82,7 @@ event = {
 	is_triggered_only = yes
 	immediate = {
 		if = { limit = { is_multiplayer = yes } set_global_flag = galaxy_bank_delay_50 }
-		else_if = { limit = { is_multiplayer = no } random_country = { limit = { is_ai = no } country_event = { id = GalaxyBankEvents.11 } } }
+		else_if = { limit = { is_multiplayer = no } random_playable_country = { limit = { is_ai = no } country_event = { id = GalaxyBankEvents.11 } } }
 	}
 }
 

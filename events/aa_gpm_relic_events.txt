@@ -13,16 +13,14 @@ country_event = {
 		from = {
 			OR = {
 				is_country_type = default
-				is_country_type = awakened_fallen_empire
-				is_country_type = fallen_empire
+				is_fallen_empire = yes
 			}
 		}
 		exists = this
 		this = {
 			OR = {
 				is_country_type = default
-				is_country_type = awakened_fallen_empire
-				is_country_type = fallen_empire
+				is_fallen_empire = yes
 			}
 			NOR = {
 				is_subject_type = "protectorate"

@@ -18,8 +18,10 @@ decision_establish_starbases = {
 		}
 		solar_system = {
 			any_neighbor_system = {
-				not = { exists = space_owner }
-				not = { exists = starbase }
+				NOR = {
+					exists = space_owner
+					exists = starbase
+				}
 				not = {
 					any_system_planet = {
 						is_colony = yes
@@ -39,8 +41,10 @@ decision_establish_starbases = {
 		solar_system = {
 			every_neighbor_system = {
 				limit = {
-					not = { exists = space_owner }
-					not = { exists = starbase }
+					NOR = {
+						exists = space_owner
+						exists = starbase
+					}
 					not = {
 						any_system_planet = {
 							is_colony = yes

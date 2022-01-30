@@ -30,10 +30,8 @@ ftm_open_transfer_window = {
 	}
 
 	potential = {
-		NOT = {
+		NOR = {
 			has_global_flag = z_modmenu_installed
-		}
-		NOT = {
 			has_global_flag = modmenu_installed
 		}
 	}

@@ -31,7 +31,7 @@ event = {
 	immediate = {
 		every_galaxy_planet = {
 			limit = {
-				NOT = { has_owner = yes }
+				has_owner = no
 				has_modifier = rogue_colonial_world
 			}
 			remove_modifier = rogue_colonial_world

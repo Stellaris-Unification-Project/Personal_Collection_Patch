@@ -242,22 +242,17 @@ country_event = {
 		}
 		if = {
 			limit = {
-				AND = {
-					NOT = {
-						has_global_flag = apsr_advanced_set_off
-					}
-					NOT = {
-						has_global_flag = apsr_advanced_count_1
-					}
-					NOT = {
-						has_global_flag = apsr_advanced_count_2
-					}
-					NOT = {
-						has_global_flag = apsr_advanced_count_4
-					}
-					NOT = {
-						has_global_flag = apsr_advanced_count_5
-					}
+				NOR = {
+					has_global_flag = apsr_advanced_set_off
+					
+					has_global_flag = apsr_advanced_count_1
+					
+					has_global_flag = apsr_advanced_count_2
+					
+					has_global_flag = apsr_advanced_count_4
+					
+					has_global_flag = apsr_advanced_count_5
+					
 				}
 			}
 			custom_tooltip = apsr.800.setup_advanced.info_2_3
@@ -297,16 +292,13 @@ country_event = {
 		}
 		if = {
 			limit = {
-				AND = {
-					NOT = {
-						has_global_flag = apsr_advanced_set_off
-					}
-					NOT = {
-						OR = {
+				NOR = {
+					has_global_flag = apsr_advanced_set_off
+					
+					OR = {
 							has_global_flag = apsr_advanced_factor_050
 							has_global_flag = apsr_advanced_factor_200
 						}
-					}
 				}
 			}
 			custom_tooltip = apsr.800.setup_advanced.info_3_2
@@ -361,18 +353,15 @@ country_event = {
 		}
 		if = {
 			limit = {
-				AND = {
-					NOT = {
-						has_global_flag = apsr_terminal_set_off
-					}
-					NOT = {
-						OR = {
+				NOR = {
+					has_global_flag = apsr_terminal_set_off
+					
+					OR = {
 							has_global_flag = apsr_terminal_factor_025
 							has_global_flag = apsr_terminal_factor_050
 							has_global_flag = apsr_terminal_factor_200
 							has_global_flag = apsr_terminal_factor_300
 						}
-					}
 				}
 			}
 			custom_tooltip = apsr.800.setup_terminal.info_2_3
@@ -401,13 +390,11 @@ country_event = {
 		}
 		if = {
 			limit = {
-				AND = {
-					NOT = {
-						has_global_flag = apsr_terminal_set_off
-					}
-					NOT = {
-						has_global_flag = apsr_terminal_set_ai_off
-					}
+				NOR = {
+					has_global_flag = apsr_terminal_set_off
+					
+					has_global_flag = apsr_terminal_set_ai_off
+					
 				}
 			}
 			custom_tooltip = apsr.800.setup_terminal.info_3_1
@@ -440,13 +427,11 @@ country_event = {
 		}
 		if = {
 			limit = {
-				AND = {
-					NOT = {
-						has_global_flag = apsr_sao_set_off
-					}
-					NOT = {
-						has_global_flag = apsr_sao_replay_set_off
-					}
+				NOR = {
+					has_global_flag = apsr_sao_set_off
+					
+					has_global_flag = apsr_sao_replay_set_off
+					
 				}
 			}
 			custom_tooltip = apsr.800.setup_sao.info_2_1
@@ -475,16 +460,13 @@ country_event = {
 		}
 		if = {
 			limit = {
-				AND = {
-					NOT = {
-						has_global_flag = apsr_sao_set_off
-					}
-					NOT = {
-						OR = {
+				NOR = {
+					has_global_flag = apsr_sao_set_off
+					
+					OR = {
 							has_global_flag = apsr_sao_factor_less
 							has_global_flag = apsr_sao_factor_more
 						}
-					}
 				}
 			}
 			custom_tooltip = apsr.800.setup_sao.info_3_2

@@ -23,7 +23,7 @@ event = {
 				random_system_planet = {
 					limit = {
 						is_planet_class = pc_barren_cold
-						NOT = { is_moon = yes }
+						is_moon = no
 					}
 					set_planet_flag = planet_mercury
 				}

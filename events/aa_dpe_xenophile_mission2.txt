@@ -13,8 +13,7 @@ country_event = {
 		is_subject = no
 		NOT = { has_country_flag = dpe_recent_xenophile_mission }
 		OR = {
-			has_ethic = ethic_xenophile
-			has_ethic = ethic_fanatic_xenophile
+			is_xenophile = yes
 			
 			any_pop_faction = {
 				is_pop_faction_type = xenoist
@@ -97,10 +96,7 @@ country_event = {
 				country_event = { id = dpe_xenophile_mission.3 }
 				modifier = {
 					factor = 0.65
-					NOR = {
-						has_ethic = ethic_xenophile
-						has_ethic = ethic_fanatic_xenophile
-					}
+					is_xenophile = no
 				}
 				modifier = {
 					factor = 1.5
@@ -109,10 +105,7 @@ country_event = {
 				modifier = {
 					factor = 0.8
 					event_target:dpe_new_contact = {
-						OR = {
-							has_ethic = ethic_xenophobe
-							has_ethic = ethic_fanatic_xenophobe
-						}
+						is_xenophobe = yes
 					}
 				}
 				modifier = {
@@ -202,10 +195,7 @@ country_event = {
 			modifier = {
 				factor = 2.5
 				event_target:dpe_new_contact = {
-					OR = {
-						has_ethic = ethic_xenophile
-						has_ethic = ethic_fanatic_xenophile
-					}
+					is_xenophile = yes
 				}
 			}
 			modifier = {
@@ -228,18 +218,14 @@ country_event = {
 			factor = 1
 			modifier = {
 				factor = 0.75
-				NOR = {
-					has_ethic = ethic_xenophile
-					has_ethic = ethic_fanatic_xenophile
-				}
+				is_xenophile = no
 			}
 			modifier = {
 				factor = 0.5
 				event_target:dpe_new_contact = {
 					OR = {
 						NOT = { has_ai_personality_behaviour = multispecies }
-						has_ethic = ethic_xenophobe
-						has_ethic = ethic_fanatic_xenophobe
+						is_xenophobe = yes
 					}
 				}
 			}

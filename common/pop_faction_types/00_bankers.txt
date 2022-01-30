@@ -17,10 +17,10 @@ bankers = {
 		}
 	}
 	is_potential = {
-		NOT = {
+		NOR = {
 			has_ethic = ethic_gestalt_consciousness
+			has_modifier = banned_capitalism
 		}
-		NOT = { has_modifier = banned_capitalism }
 	}
 	parameters = {
 		empire = {
@@ -746,8 +746,10 @@ bankers = {
 				exists = owner
 				parameter:empire = { 
 					has_modifier = suppressed_capitalism
-					not = { has_ethic = ethic_capitalism }
-					not = { has_ethic = ethic_fanatic_capitalism }
+					NOR = {
+						has_ethic = ethic_capitalism
+						has_ethic = ethic_fanatic_capitalism
+					}
 				}
 				not = { has_modifier = banned_faction }
 			}

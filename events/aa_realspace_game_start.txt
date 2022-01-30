@@ -10,7 +10,7 @@ event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		every_country = {
+		every_playable_country = {
 			limit = {
 				is_ai = no
 				has_country_flag = giga_host

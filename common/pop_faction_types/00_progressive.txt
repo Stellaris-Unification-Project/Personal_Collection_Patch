@@ -21,8 +21,10 @@ progressive = {
 	}
 
 	is_potential = {
-		NOT = { has_authority = auth_hive_mind }
-		NOT = { has_country_flag = suppress_vanilla_factions }
+		NOR = {
+			has_authority = auth_hive_mind
+			has_country_flag = suppress_vanilla_factions
+		}
 		NOT = { has_modifier = banned_egalitarian }																   
 	}
 	
@@ -44,10 +46,7 @@ progressive = {
 				  
 		is_shackled_robot = no
 		NOT = { has_trait = trait_nerve_stapled }
-		OR = {
-			has_ethic = ethic_egalitarian
-			has_ethic = ethic_fanatic_egalitarian
-		}
+		is_egalitarian = yes
 	}
 	 
 	attraction = {
@@ -485,8 +484,10 @@ progressive = {
 				exists = owner
 				parameter:empire = { 
 					has_modifier = suppressed_egalitarian
-					not = { has_ethic = ethic_egalitarian }
-					not = { has_ethic = ethic_fanatic_egalitarian }
+					NOR = {
+						has_ethic = ethic_egalitarian
+						has_ethic = ethic_fanatic_egalitarian
+					}
 				}
 				not = { has_modifier = banned_faction }
 			}
