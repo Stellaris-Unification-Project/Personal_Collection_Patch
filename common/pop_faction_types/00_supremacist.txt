@@ -24,8 +24,8 @@ supremacist = {
 		NOR = {
 			has_ethic = ethic_gestalt_consciousness
 			has_country_flag = suppress_vanilla_factions
+			has_modifier = banned_xenophobe2
 		}
-		NOT = { has_modifier = banned_xenophobe2 }
 	}
 	
 	parameters = {
@@ -707,10 +707,7 @@ supremacist = {
 				exists = owner
 				parameter:empire = { 
 					has_modifier = suppressed_xenophobe
-					NOR = {
-						has_ethic = ethic_xenophobe
-						has_ethic = ethic_fanatic_xenophobe
-					}
+					is_xenophobe = no
 				}
 				not = { has_modifier = banned_faction }
 			}

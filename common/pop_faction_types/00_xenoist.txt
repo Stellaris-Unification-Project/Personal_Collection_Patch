@@ -24,8 +24,8 @@ xenoist = {
 		NOR = {
 			has_ethic = ethic_gestalt_consciousness
 			has_country_flag = suppress_vanilla_factions
+			has_modifier = banned_xenophile
 		}
-		NOT = { has_modifier = banned_xenophile }
 	}
 	
 	parameters = {
@@ -776,10 +776,7 @@ xenoist = {
 				exists = owner
 				parameter:empire = { 
 					has_modifier = suppressed_xenophile
-					NOR = {
-						has_ethic = ethic_xenophile
-						has_ethic = ethic_fanatic_xenophile
-					}
+					is_xenophile = no
 				}
 				not = { has_modifier = banned_faction }
 			}

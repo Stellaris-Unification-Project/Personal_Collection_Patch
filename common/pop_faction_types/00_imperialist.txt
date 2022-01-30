@@ -24,8 +24,8 @@ imperialist = {
 		NOR = {
 			has_ethic = ethic_gestalt_consciousness
 			has_country_flag = suppress_vanilla_factions
-		}
-		NOT = { has_modifier = banned_militarist }																  
+			has_modifier = banned_militarist
+		}																  
 	}
 	
 	parameters = {
@@ -721,10 +721,7 @@ imperialist = {
 				exists = owner
 				parameter:empire = { 
 					has_modifier = suppressed_militarist 
-					NOR = {
-						has_ethic = ethic_militarist
-						has_ethic = ethic_fanatic_militarist
-					}
+					is_militarist = no
 				}
 				not = { has_modifier = banned_faction }
 			}

@@ -23,8 +23,8 @@ prosperity = {
 		NOR = {
 			has_ethic = ethic_gestalt_consciousness
 			has_country_flag = suppress_vanilla_factions
+			has_modifier = banned_pacifist
 		}
-		NOT = { has_modifier = banned_pacifist }
 	}
 	
 	parameters = {
@@ -550,10 +550,7 @@ prosperity = {
 				exists = owner
 				parameter:empire = { 
 					has_modifier = suppressed_pacifist
-					NOR = {
-						has_ethic = ethic_pacifist
-						has_ethic = ethic_fanatic_pacifist
-					}
+					is_pacifist = no
 				}
 				not = { has_modifier = banned_faction }
 			}

@@ -24,8 +24,8 @@ traditionalist = {
 		NOR = {
 			has_ethic = ethic_gestalt_consciousness
 			has_country_flag = suppress_vanilla_factions
+			has_modifier = banned_spiritualist
 		}
-		NOT = { has_modifier = banned_spiritualist }
 	}
 	
 	parameters = {
@@ -658,10 +658,7 @@ traditionalist = {
 				exists = owner
 				parameter:empire = { 
 					has_modifier = suppressed_spiritualist
-					NOR = {
-						has_ethic = ethic_spiritualist
-						has_ethic = ethic_fanatic_spiritualist
-					}
+					is_spiritualist = no
 				}
 				not = { has_modifier = banned_faction }
 			}
